@@ -12,7 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y --skip-unavailable fish micro netcat fastfetch bsd-games rogue arp-scan evtest \
 		cargo gcc telnet adw-gtk3-theme input-remapper steam  \
-		waypipe
+		waypipe nautilus-gsconnect
 
 # Use a COPR Example:
 #
