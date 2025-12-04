@@ -34,6 +34,6 @@ wget https://raw.githubusercontent.com/LuanAdemi/mediatek7925e-bluetooth-fix/ref
 chmod +x mediatek_fix.sh
 
 # Run it with sudo
-./mediatek_fix.sh --apply
+sudo ./mediatek_fix.sh --apply
 
 rm ./mediatek_fix.sh
