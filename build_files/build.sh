@@ -25,15 +25,3 @@ dnf5 -y copr disable starfish/howdy-beta
 
 #chmod 666 /dev/video2
 systemctl enable podman.socket
-
-
-# Download the script
-wget https://raw.githubusercontent.com/LuanAdemi/mediatek7925e-bluetooth-fix/refs/heads/main/mediatek_fix.sh
-
-# Make it executable
-chmod +x mediatek_fix.sh
-
-# Run it with sudo
-sudo ./mediatek_fix.sh --apply
-
-rm ./mediatek_fix.sh
