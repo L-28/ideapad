@@ -10,9 +10,9 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y --skip-unavailable fish micro netcat fastfetch bsd-games rogue arp-scan evtest \
-		cargo gcc telnet adw-gtk3-theme input-remapper steam  \
-		waypipe nautilus-gsconnect gcc-c++
+dnf5 install -y --skip-unavailable fish micro netcat fastfetch bsd-games rogue \
+		arp-scan evtest telnet adw-gtk3-theme input-remapper steam  \
+		waypipe nautilus-gsconnect
 
 # Use a COPR Example:
 #
