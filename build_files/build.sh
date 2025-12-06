@@ -24,4 +24,4 @@ dnf5 -y copr disable starfish/howdy-beta
 #### Example for enabling a System Unit File
 
 #chmod 666 /dev/video2
-systemctl enable podman.socket
+systemctl enable podman.socket input-remapper
