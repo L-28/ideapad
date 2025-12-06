@@ -23,5 +23,16 @@ dnf5 -y copr disable starfish/howdy-beta
 
 #### Example for enabling a System Unit File
 
+#Mediatek fix
+
+# Download the script
+wget https://raw.githubusercontent.com/LuanAdemi/mediatek7925e-bluetooth-fix/refs/heads/main/mediatek_fix.sh
+
+# Make it executable
+chmod +x mediatek_fix.sh
+
+# Run it with sudo
+/bin/bash -c "sudo ./mediatek_fix.sh --apply"
+
 #chmod 666 /dev/video2
 systemctl enable podman.socket
