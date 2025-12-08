@@ -30,5 +30,3 @@ dnf5 -y copr disable starfish/howdy-beta
 
 #chmod 666 /dev/video2
 systemctl enable podman.socket input-remapper mpd
-
-rpm-ostree override remove 'dnf*' 'libdnf*'
