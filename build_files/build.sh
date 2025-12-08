@@ -12,8 +12,10 @@ set -ouex pipefail
 rpm-ostree install -yA \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
-	https://copr.fedorainfracloud.org/coprs/starfish/howdy-beta/repo/fedora-$(rpm -E %fedora)/starfish-howdy-beta-fedora-43.repo
 
+curl -L \
+	https://copr.fedorainfracloud.org/coprs/starfish/howdy-beta/repo/fedora-$(rpm -E %fedora)/starfish-howdy-beta-fedora-43.repo \
+	-o /etc/yum.repos.d/_copr_starfish-howdy-beta.repo
 # this installs a package from fedora repos
 rpm-ostree install -yA \
 	fish micro netcat fastfetch bsd-games rogue steam mpd \
