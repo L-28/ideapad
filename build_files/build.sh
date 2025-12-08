@@ -12,7 +12,7 @@ set -ouex pipefail
 rpm-ostree install -yA \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
-	https://copr.fedorainfracloud.org/coprs/starfish/howdy-beta/repo/fedora-43/starfish-howdy-beta-fedora-43.repo
+	https://copr.fedorainfracloud.org/coprs/starfish/howdy-beta/repo/fedora-$(rpm -E %fedora)/starfish-howdy-beta-fedora-43.repo
 
 # this installs a package from fedora repos
 rpm-ostree install -yA \
@@ -22,9 +22,9 @@ rpm-ostree install -yA \
 	gnome-software-rpm-ostree mozilla-openh264 howdy howdy-gtk
 
 # Use a COPR Example:
-rpm-ostree -y copr enable starfish/howdy-beta
-dnf5 -y install
-dnf5 -y copr disable starfish/howdy-beta
+# rpm-ostree -y copr enable starfish/howdy-beta
+# dnf5 -y install
+# dnf5 -y copr disable starfish/howdy-beta
 # Disable COPRs so they don't end up enabled on the final image:
 
 #### Example for enabling a System Unit File
