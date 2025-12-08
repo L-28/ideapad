@@ -13,12 +13,13 @@ set -ouex pipefail
 dnf5 install -y fish micro netcat fastfetch bsd-games rogue \
 		arp-scan evtest telnet adw-gtk3-theme input-remapper \
 		waypipe nautilus-gsconnect ibm-plex-fonts-all \
-		gnome-software-rpm-ostree mozilla-openh264
+		gnome-software-rpm-ostree mozilla-openh264 steam-devices
 rpm-ostree install -yA \
-  --rpm-repo=https://download1.rpmfusion.org/free/fedora/releases/43/Everything/x86_64/os \
-  --rpm-repo=https://download1.rpmfusion.org/nonfree/fedora/releases/43/Everything/x86_64/os/ \
-  steam steam-devices kernel-modules-extra mpd
-
+	--rpm-repo=https://download1.rpmfusion.org/free/fedora/releases/43/Everything/x86_64/os \
+	 mpd
+rpm-ostree install -yA \
+	--rpm-repo=https://download1.rpmfusion.org/nonfree/fedora/releases/43/Everything/x86_64/os/ \
+	steam
 
 # Use a COPR Example:
 #
