@@ -20,7 +20,7 @@ curl -L \
 
 rpm-ostree override remove noopenh264
 
-rpm-ostree override replace --install \
+rpm-ostree install -yA \
 	fish micro netcat fastfetch bsd-games rogue steam mpd \
 	arp-scan evtest telnet adw-gtk3-theme input-remapper \
 	waypipe nautilus-gsconnect ibm-plex-fonts-all steam-devices \
