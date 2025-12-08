@@ -13,7 +13,7 @@ set -ouex pipefail
 dnf5 install -y --skip-unavailable fish micro netcat fastfetch bsd-games rogue \
 		arp-scan evtest telnet adw-gtk3-theme input-remapper steam  \
 		waypipe nautilus-gsconnect ibm-plex-fonts-all \
-		gnome-software-rpm-ostree
+		gnome-software-rpm-ostree mozilla-openh264
 
 # Use a COPR Example:
 #
