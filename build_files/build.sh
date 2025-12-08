@@ -18,7 +18,7 @@ curl -L \
 	-o /etc/yum.repos.d/_copr_starfish-howdy-beta.repo
 # this installs a package from fedora repos
 
-rpm-ostree override remove noopenh264 dnf5
+rpm-ostree override remove noopenh264
 
 rpm-ostree install -yA \
 	fish micro netcat fastfetch bsd-games rogue steam mpd \
