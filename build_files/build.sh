@@ -21,8 +21,9 @@ dnf5 install -y fish micro netcat fastfetch bsd-games rogue \
 		steam mpd
 
 # Use a COPR Example:
-#
-rpm-ostree install -yA --rpm-repo=https://copr.fedorainfracloud.org/coprs/starfish/howdy-beta/ howdy howdy-gtk
+dnf5 -y copr enable starfish/howdy-beta
+dnf5 -y install howdy howdy-gtk
+dnf5 -y copr disable starfish/howdy-beta
 # Disable COPRs so they don't end up enabled on the final image:
 
 #### Example for enabling a System Unit File
