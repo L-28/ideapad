@@ -9,20 +9,21 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-dnf5 install -y \
+rpm-ostree install -yA \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
+	https://copr.fedorainfracloud.org/coprs/starfish/howdy-beta/repo/fedora-43/starfish-howdy-beta-fedora-43.repo
 
 # this installs a package from fedora repos
-dnf5 install -y \
+rpm-ostree install -yA \
 	fish micro netcat fastfetch bsd-games rogue steam mpd \
 	arp-scan evtest telnet adw-gtk3-theme input-remapper \
-	waypipe nautilus-gsconnect ibm-plex-fonts-all \
-	gnome-software-rpm-ostree mozilla-openh264 steam-devices
+	waypipe nautilus-gsconnect ibm-plex-fonts-all steam-devices \
+	gnome-software-rpm-ostree mozilla-openh264 howdy howdy-gtk
 
 # Use a COPR Example:
-dnf5 -y copr enable starfish/howdy-beta
-dnf5 -y install howdy howdy-gtk
+rpm-ostree -y copr enable starfish/howdy-beta
+dnf5 -y install
 dnf5 -y copr disable starfish/howdy-beta
 # Disable COPRs so they don't end up enabled on the final image:
 
