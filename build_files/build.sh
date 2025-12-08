@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install -yA fish micro netcat fastfetch bsd-games rogue \
+dnf5 -y fish micro netcat fastfetch bsd-games rogue \
 		arp-scan evtest telnet adw-gtk3-theme input-remapper \
 		waypipe nautilus-gsconnect ibm-plex-fonts-all \
 		gnome-software-rpm-ostree mozilla-openh264
