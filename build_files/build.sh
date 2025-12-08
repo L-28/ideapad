@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 rpm-ostree install -yA fish micro netcat fastfetch bsd-games rogue \
-		arp-scan evtest telnet adw-gtk3-theme input-remapper steam  \
+		arp-scan evtest telnet adw-gtk3-theme input-remapper \
 		waypipe nautilus-gsconnect ibm-plex-fonts-all \
 		gnome-software-rpm-ostree mozilla-openh264
 rpm-ostree install -yA \
