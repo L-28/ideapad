@@ -18,12 +18,13 @@ curl -L \
 	-o /etc/yum.repos.d/_copr_starfish-howdy-beta.repo
 # this installs a package from fedora repos
 
+rpm-ostree override remove noopenh264
+
 rpm-ostree override replace --install \
 	fish micro netcat fastfetch bsd-games rogue steam mpd \
 	arp-scan evtest telnet adw-gtk3-theme input-remapper \
 	waypipe nautilus-gsconnect ibm-plex-fonts-all steam-devices \
 	gnome-software-rpm-ostree mozilla-openh264 howdy howdy-gtk
-	--remove noopenh264
 
 # Use a COPR Example:
 # rpm-ostree -y copr enable starfish/howdy-beta
