@@ -9,17 +9,16 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+sudo rpm-ostree install \
+	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 # this installs a package from fedora repos
 dnf5 install -y fish micro netcat fastfetch bsd-games rogue \
 		arp-scan evtest telnet adw-gtk3-theme input-remapper \
 		waypipe nautilus-gsconnect ibm-plex-fonts-all \
-		gnome-software-rpm-ostree mozilla-openh264 steam-devices
-rpm-ostree install -yA \
-	--rpm-repo=https://download1.rpmfusion.org/free/fedora/releases/43/Everything/x86_64/os \
-	 mpd
-rpm-ostree install -yA \
-	--rpm-repo=https://download1.rpmfusion.org/nonfree/fedora/releases/43/Everything/x86_64/os/ \
-	steam
+		gnome-software-rpm-ostree mozilla-openh264 steam-devices \
+		steam mpd
 
 # Use a COPR Example:
 #
