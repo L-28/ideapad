@@ -5,8 +5,7 @@ COPY build_files /
 # Base Image
 # FROM ghcr.io/ublue-os/silverblue-main:latest
 # FROM quay.io/fedora-ostree-desktops/silverblue:43
-#FROM quay.io/fedora/fedora-silverblue:43
-FROM https://registry.fedoraproject.org/fedora-silverblue:43
+FROM quay.io/fedora/fedora-silverblue:43
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
