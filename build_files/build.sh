@@ -9,7 +9,8 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-rpm-ostree install -yA \
+#rpm-ostree install -yA \
+dnf5 -y install \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
 
@@ -18,16 +19,24 @@ curl -L \
 	-o /etc/yum.repos.d/_copr_starfish-howdy-beta.repo
 # this installs a package from fedora repos
 
-rpm-ostree override remove noopenh264
+dnf5 remove noopenh264
 
-rpm-ostree override replace --remove=mesa-va-drivers mesa-va-drivers-freeworld
-rpm-ostree override replace --remove=mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+#rpmfusion video drivers
 
-rpm-ostree install -yA \
+dnf5 swap mesa-va-drivers mesa-va-drivers-freeworld
+dnf5 swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+dnf5 swap mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
+dnf5 swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
+dnf5 swap ffmpeg-free ffmpeg --allowerasing
+dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+
+#rpm-ostree install -yA \
+dnf5 -y install \
 	fish micro netcat fastfetch bsd-games rogue steam mpd \
 	arp-scan evtest telnet adw-gtk3-theme input-remapper \
 	waypipe nautilus-gsconnect ibm-plex-fonts-all steam-devices \
-	gnome-software-rpm-ostree mozilla-openh264 howdy howdy-gtk
+	gnome-software-rpm-ostree mozilla-openh264 howdy howdy-gtk \
+	rpmfusion-free-release-tainted libdvdcss
 
 # Use a COPR Example:
 # rpm-ostree -y copr enable starfish/howdy-beta
