@@ -20,6 +20,9 @@ curl -L \
 
 rpm-ostree override remove noopenh264
 
+rpm-ostree override replace --remove=mesa-va-drivers mesa-va-drivers-freeworld
+rpm-ostree override replace --remove=mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+
 rpm-ostree install -yA \
 	fish micro netcat fastfetch bsd-games rogue steam mpd \
 	arp-scan evtest telnet adw-gtk3-theme input-remapper \
