@@ -21,6 +21,7 @@ curl -L \
 
 #rpmfusion video drivers
 
+dnf5 -y remove firefox
 dnf5 -y swap mesa-va-drivers mesa-va-drivers-freeworld
 dnf5 -y swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 dnf5 -y swap mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
