@@ -28,7 +28,6 @@ dnf5 -y swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 dnf5 -y swap mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
 dnf5 -y swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
-dnf5 -y update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 
 #rpm-ostree install -yA \
 dnf5 -y install \
