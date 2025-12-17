@@ -28,7 +28,7 @@ dnf5 -y swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
 dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 
 #rpm-ostree install -yA \
-dnf5 -y install \
+dnf5 -y --refresh --skip-unavailable install \
 	fish micro netcat fastfetch bsd-games rogue steam mpd \
 	arp-scan evtest telnet adw-gtk3-theme input-remapper \
 	waypipe nautilus-gsconnect ibm-plex-fonts-all steam-devices \
