@@ -19,7 +19,7 @@ curl -L \
 	-o /etc/yum.repos.d/_copr_starfish-howdy-beta.repo
 # this installs a package from fedora repos
 
-dnf5 remove noopenh264
+dnf5 -y remove noopenh264
 
 #rpmfusion video drivers
 
