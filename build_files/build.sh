@@ -34,8 +34,7 @@ dnf5 -y --refresh install --skip-unavailable \
 	telnet adw-gtk3-theme input-remapper waypipe ibm-plex-fonts-all \
 	steam-devices gnome-software-rpm-ostree	mozilla-openh264 howdy \
 	howdy-gtk rpmfusion-free-release-tainted libdvdcss gcc gcc-c++ \
-	gnome-terminal-nautilus seahorse-nautilus nautilus-gsconnect \
-	bign-handheld-thumbnailer
+	seahorse-nautilus nautilus-gsconnect bign-handheld-thumbnailer
 
 # Use a COPR Example:
 # rpm-ostree -y copr enable starfish/howdy-beta
