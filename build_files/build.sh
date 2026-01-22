@@ -30,11 +30,11 @@ dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 
 #rpm-ostree install -yA \
 dnf5 -y --refresh install --skip-unavailable \
-	fish micro netcat fastfetch bsd-games rogue steam mpd \
-	arp-scan evtest telnet adw-gtk3-theme input-remapper \
-	waypipe nautilus-gsconnect ibm-plex-fonts-all steam-devices \
-	gnome-software-rpm-ostree mozilla-openh264 howdy howdy-gtk \
-	rpmfusion-free-release-tainted libdvdcss gcc
+	fish micro netcat fastfetch bsd-games rogue steam mpd arp-scan evtest \
+	telnet adw-gtk3-theme input-remapper waypipe ibm-plex-fonts-all \
+	steam-devices gnome-software-rpm-ostree	mozilla-openh264 howdy \
+	howdy-gtk rpmfusion-free-release-tainted libdvdcss gcc \
+	gnome-terminal-nautilus seahorse-nautilus nautilus-gsconnect
 
 # Use a COPR Example:
 # rpm-ostree -y copr enable starfish/howdy-beta
