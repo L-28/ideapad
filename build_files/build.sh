@@ -34,7 +34,7 @@ dnf5 -y --refresh install --skip-unavailable \
 	arp-scan evtest telnet adw-gtk3-theme input-remapper \
 	waypipe nautilus-gsconnect ibm-plex-fonts-all steam-devices \
 	gnome-software-rpm-ostree mozilla-openh264 howdy howdy-gtk \
-	rpmfusion-free-release-tainted libdvdcss
+	rpmfusion-free-release-tainted libdvdcss gcc
 
 # Use a COPR Example:
 # rpm-ostree -y copr enable starfish/howdy-beta
