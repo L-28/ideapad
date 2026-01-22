@@ -33,7 +33,7 @@ dnf5 -y --refresh install --skip-unavailable \
 	fish micro netcat fastfetch bsd-games rogue steam mpd arp-scan evtest \
 	telnet adw-gtk3-theme input-remapper waypipe ibm-plex-fonts-all \
 	steam-devices gnome-software-rpm-ostree	mozilla-openh264 howdy \
-	howdy-gtk rpmfusion-free-release-tainted libdvdcss gcc \
+	howdy-gtk rpmfusion-free-release-tainted libdvdcss gcc gcc-c++ \
 	gnome-terminal-nautilus seahorse-nautilus nautilus-gsconnect \
 	bign-handheld-thumbnailer
 
